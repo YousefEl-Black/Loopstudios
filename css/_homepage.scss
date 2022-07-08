@@ -1,9 +1,9 @@
 // Start Landing
 .header-landing {
   height: 100vh;
-  background-image: url(../../../imgs/mobile/image-hero.jpg);
+  background-image: url(../imgs/mobile/image-hero.jpg);
   @include breakpoints(md) {
-    background-image: url(../../../imgs/desktop/image-hero.jpg);
+    background-image: url(../imgs/desktop/image-hero.jpg);
   }
   background-repeat: no-repeat;
   background-size: cover;
