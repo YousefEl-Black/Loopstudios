@@ -1,0 +1,79 @@
+header {
+  padding: 60px 0;
+  ul.links {
+    li {
+      a {
+        font-family: $fontOne;
+        font-weight: 400;
+        cursor: pointer;
+        text-transform: capitalize;
+        position: relative;
+        letter-spacing: 0.5px;
+        user-select: none;
+        &:before {
+          content: "";
+          position: absolute;
+          width: 0%;
+          height: 2px;
+          background-color: $white;
+          bottom: -10px;
+          border-radius: 10px;
+          transition: 0.3s;
+        }
+        &:hover::before {
+          transform: translateX(50%); 
+          width: 50%;
+        }
+      }
+    }
+  }
+  .hamburger {
+    img {
+      cursor: pointer;
+      user-select: none;
+      display: block;
+      &.active {
+        display: none;
+      }
+    }
+  }
+  .megamenu {
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    transform: translateX(-100%);
+    background-color: black;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    &.active {
+      transform: translateX(0%);
+    }
+    .container {
+      .top {
+        .close {
+          cursor: pointer;
+        }
+      }
+      .links {
+        height: calc(100vh - 48px);
+        display: flex;
+        align-items: center;
+        font-family: $fontTwo;
+        font-size: 40px;
+        ul {
+          li {
+            padding: 20px 0;
+            transition: 0.3s;
+            &:hover {
+              margin-left: 15px;
+            }
+            a {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

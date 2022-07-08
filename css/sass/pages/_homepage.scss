@@ -1,0 +1,136 @@
+// Start Landing
+.header-landing {
+  height: 100vh;
+  background-image: url(../../../imgs/mobile/image-hero.jpg);
+  @include breakpoints(md) {
+    background-image: url(../../../imgs/desktop/image-hero.jpg);
+  }
+  background-repeat: no-repeat;
+  background-size: cover;
+  .landing {
+    height: calc(100vh - 160px);
+    .text {
+      border: 2px solid white;
+      padding: 20px 60px;
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 25px;
+        @include breakpoints(md) {
+          font-size: 60px;
+        };
+        font-family: $fontTwo;
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+// End Landing
+
+// Start About
+.about {
+  position: relative;
+  .container {
+    min-height: 100vh;
+    .image {
+      padding: 10px;
+      @include breakpoints(md) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+      }
+    }
+    .text {
+      background-color: white;
+      padding: 30px 0;
+      @include breakpoints(md) {
+        transform: translateY(50%);
+        padding: 70px;
+      }
+      h1 {
+        text-transform: uppercase;
+        font-size: 25px;
+        @include breakpoints(lg) {
+          font-size: 40px;
+        }
+        @include breakpoints(xl) {
+          font-size: 60px;
+        }
+        font-family: $fontTwo;
+        font-weight: 300;
+      }
+      p {
+        color: $darkGray;
+        line-height: 2;
+      }
+    }
+  }
+}
+// Start About
+
+// Start Our Creations
+.our-creations {
+  .btn {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+    &:hover {
+      color: white;
+      background-color: black;
+    }
+  }
+  .top {
+    .title {
+      text-transform: uppercase;
+      font-family: $fontTwo;
+      font-weight: 300;
+      width: 100%;
+      @include breakpoints(md) {
+        width: auto;
+      }
+    }
+  }
+  .creations {
+    @include breakpoints(md) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .creation {
+      position: relative;
+      cursor: pointer;
+      &:hover .image {
+        opacity: 0.3;
+      }
+      &:hover h2 {
+        color: black;
+      }
+      .image {
+        width: 100%;
+        transition: 0.3s;
+        img {
+          width: 100%;
+        }
+      }
+      h2 {
+        transition: 0.3s;
+        position: absolute;
+        bottom: 0;
+        color: white;
+        font-family: $fontTwo;
+        font-weight: 300;
+        text-transform: uppercase;
+        width: 100%;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        word-wrap: break-word;
+      }
+    }
+  }
+}
+// End Our Creations

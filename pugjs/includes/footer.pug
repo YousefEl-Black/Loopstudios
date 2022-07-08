@@ -1,0 +1,21 @@
+footer(class="bg-black py-4")
+  .container(class="d-flex flex-column flex-md-row justify-content-md-between justify-content-center align-items-center")
+    .left-side
+      .logo(class="pb-4 d-md-block d-flex justify-content-center align-items-center")
+        img(src="../../imgs/logo.svg", alt="Loopstudios Logo")
+      ul.links(class="d-flex flex-column flex-md-row align-items-center align-items-md-start gap-4 pb-3 ps-0 p-md-0")
+        -var links = ["about", "careers", "events", "products", "support"]
+        each link in links
+          li
+            a(class="text-decoration-none text-white" href="#" + link)= link      
+    .right-side
+      ul.social-media(class="d-flex gap-3 p-0 justify-content-md-end justify-content-center")
+        -var links = ['<i class="fa-brands fa-facebook-square"></i>', '<i class="fa-brands fa-twitter"></i>', '<i class="fa-brands fa-pinterest"></i>', '<i class="fa-brands fa-instagram"></i>']
+        each link in links
+          li
+            a(class="text-white" href="#")
+              != link
+      .copyright
+        p(class="text-center text-md-start")
+          | &copy; 2022 Loopstudios. All rights reserved by 
+          span Yousef Elblack.
